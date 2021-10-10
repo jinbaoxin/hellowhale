@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "akstest003-c6fd"
+    labels:
+        app: "akstest003-c6fd"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "akstest003-c6fd"
